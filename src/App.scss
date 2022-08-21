@@ -1,37 +1,90 @@
 // MAIN
-.main {
-  background-color: #dfdfdf;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
 
 .user-score {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  transition: bottom .7s;
+  opacity: .92;
+  color: #fff;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  font-size: 2rem;
+  // bottom: 155%;
+  margin-top: 9px;
+  margin-left: 100px;
+  font-family: font-poppins;
+  @media only screen and (min-width : 768px) {
+    font-size: 0.5rem;
+  }
+  
+  @media only screen and (max-width : 580px) {
+    font-size: 20px;  
+    margin-right: 400px; 
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    font-size: 2rem;  
+  }
 }
 
 .com-score {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 100px;
+  margin-top: 9px;
+  color: #fff;
+  font-size: 2rem;
+  font-family: font-poppins;
+  @media only screen and (max-width : 580px) {
+    font-size: 20px;
+    margin-left: 400px;
+  }
+  
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    font-size: 0.5rem;
+  }
+
+  @media only screen and (min-width : 768px) {
+    font-size: 2rem;
+  }
+  
 }
 
 // CARD
 
 .cards {
   display: flex;
-  margin-top: 60px;
+  background-image: url('./components/Galaxy-Dark-StarWar.jpg');
+  height: 100vh;
+  flex-direction: row;
+  justify-content: space-evenly;
+
 }
 
 .card {
-  width: 400px;
-  margin: 12px;
-  background: white;
+  margin-top: 80px; 
+  max-width: 328px;
+  max-height: 500px;
+  @media only screen and (min-width : 768px) {
+    width: 75%;
+    background-color: #D3D3D3;
+  }
+  
+  /* Medium Devices, Desktops */
+  @media only screen and (min-width : 992px) {
+    width: 50%;
+    background-color: #D3D3D3;
+  }
   .card-header {
     padding: 12px;
-    background-color: yellow;
+    height:50px;
+    background-color: #FFBF00;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
   }
   .card-image {
     img {
@@ -42,17 +95,20 @@
     padding: 12px;
     .category-item {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       padding: 10px 0;
-      background: yellow;
-      margin-bottom: 5px;
+      background: #FFBF00;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 15px;
       cursor: pointer;
+      font-weight: bold;
+      border-radius: 6px;
     }
   }
 }
 
 // MESSAGE
-.modal {
+.p {
   display: none;
   position: fixed;
   z-index: 1;
@@ -69,8 +125,8 @@
     display: block;
   }
 
-  .modal-content {
-    background-color: #fefefe;
+  .message-result {
+    background-color: yellow;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -96,8 +152,32 @@
   .content {
     text-align: center;
     padding: 20px;
+    color:#FFBF00;
+    margin-right: 50px;
+    font-weight: 900;
+    font-size:25px;
   }
   .footer {
     text-align: center;
   }
 }
+
+.button-play{
+background-color: #FFBF00;
+background-repeat:no-repeat;
+color:#000000;
+font-weight: bold;
+font-size: 20px;
+margin-right: 50px;
+text-decoration: none;
+}
+
+.button-reset{
+  background-color: #FFBF00;
+  background-repeat:no-repeat;
+  color:#000000;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 50px;
+  text-decoration: none;
+  }

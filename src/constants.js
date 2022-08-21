@@ -4,4 +4,4 @@ export const GameResultType = {
   Lose: -1,
 };
 
-export const MAX_GAME_TURNS = 3;
+export const MAX_GAME_TURNS = 10;

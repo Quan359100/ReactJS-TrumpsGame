@@ -4,7 +4,7 @@ Top_Trumps using ReactJS, custom Hooks
 # Author: QuanDM 
 
 # Live Demo:
-https://quan359100.github.io/starwardemo
+
 
 
 ## How to run on local env

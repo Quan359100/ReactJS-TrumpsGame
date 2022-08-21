@@ -17,7 +17,7 @@ function GameResult({ gameResult, playAgain }) {
       <div className='message-container'>
         <div className='content'>{message}</div>
         <div className='footer'>
-          <button className='button' onClick={playAgain}>
+          <button className='button-play' onClick={playAgain}>
             Continue
           </button>
         </div>
@@ -41,7 +41,7 @@ function FinalGameResult({ finalGameResult, newGame }) {
       <div className='message-container'>
         <div className='content'>{message}</div>
         <div className='footer'>
-          <button onClick={newGame}>New Game</button>
+          <button className='button-reset' onClick={newGame}>New Game</button>
         </div>
       </div>
     </>
@@ -59,8 +59,8 @@ export default function Message() {
   );
 
   return (
-    <div className={`modal ${isShow ? 'show' : ''}`}>
-      <div className='modal-content'>
+    <div className={`p ${isShow ? 'show' : ''}`}>
+      <div className='messsage-result'>
         {isShow && (
           <>
             {Number.isInteger(gameResult) && (
