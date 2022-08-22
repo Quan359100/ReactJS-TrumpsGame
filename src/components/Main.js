@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CardItem from './CardItem';
 import Score from './Score';
 import { useMain } from '../hooks/useMain';
