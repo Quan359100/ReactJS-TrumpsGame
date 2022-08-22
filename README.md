@@ -17,7 +17,7 @@ npm install
 2. Serve on local
 
 ```
-npm start
+npm run dev
 ```
 
 3. Open website and direct to URL
