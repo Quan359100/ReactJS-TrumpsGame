@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const SWAPIClient = axios.create({
   baseURL: 'https://swapi.dev/api',
-  timeout: 1000,
+  timeout: 30000,
 });
 
 const SWAPIService = {
