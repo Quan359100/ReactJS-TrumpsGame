@@ -23,15 +23,12 @@ export const MainProvider = ({ children }) => {
   const [gameResult, setGameResult] = useState(null);
   const [finalGameResult, setFinalGameResult] = useState(null);
 
-  useEffect(() => {
-    async function fetchData() {
-      const data = await SWAPIService.getAllStarships();
-      const dataCards = data.map((item) => Card.buildFromStarshipData(item));
-      setCards(dataCards);
-      setAllCards(dataCards);
-    }
-    fetchData();
-  }, []);
+  async function fetchData() {
+    const data = await SWAPIService.getAllStarships();
+    const dataCards = data.map((item) => Card.buildFromStarshipData(item));
+    setCards(dataCards);
+    setAllCards(dataCards);
+  }
 
   function resetCards() {
     let indexCard1 = Math.floor(Math.random() * cards.length);
@@ -101,6 +98,7 @@ export const MainProvider = ({ children }) => {
   return (
     <MainContext.Provider
       value={{
+        fetchData,
         isLoading,
         userCard,
         comCard,
