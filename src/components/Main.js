@@ -6,7 +6,11 @@ import Message from './Message';
 import Loading from './Loading';
 
 export default function Main() {
-  const { isLoading, userCard, comCard } = useMain();
+  const { isLoading, userCard, comCard, fetchData } = useMain();
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className='main'>
